@@ -1,0 +1,25 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "Main",
+            "projectName": "Network-Simulator-Java_4efe7fa1"
+        },
+        {
+            "type": "java",
+            "name": "Launch Main",
+            "request": "launch",
+            "mainClass": "com.example.Main",
+            "projectName": "YourProjectName",
+            "vmArgs": "--enable-preview",
+            "args": "",
+            "sourcePaths": [
+                "${workspaceFolder}/src"
+            ],
+            "cwd": "${workspaceFolder}"
+        }
+    ]
+}
