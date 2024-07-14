@@ -1,6 +1,8 @@
 package EncodeHelper;
 import MessageHelper.Message;
 
+import java.util.Arrays;
+
 public class ErrorCorrection {
 
     public static void parityBlockEncoding(Message message, int blockLength) { // Even parity
@@ -50,18 +52,24 @@ public class ErrorCorrection {
             System.out.println();
         }
     }
-    public static void hammingEncoding(Message message) {
+    public static boolean parityBlockVerify(Message message, int blockLength) {
+
+    }
+    public static Message hammingEncoding(Message message) {
         String messageString = message.getMessageAsString();
         int messageLength = message.getMessageAsArray().length; // Get actual message length
         int r = calculateRedundantBits(messageLength);
 
         int[] code = generateCode(messageString, messageLength, r);
         calculateParityBits(code, r);
-
+        StringBuilder sb = new StringBuilder();
         for (int i = 1; i < code.length; i++) { // Skip index 0
-            System.out.print(code[i]);
+            sb.append(code[i]);
         }
-        System.out.println();
+        return new Message(sb.toString());
+    }
+    public static boolean hammingVerify(Message message) {
+        return true;
     }
 
     private static void calculateParityBits(int[] code, int r) {

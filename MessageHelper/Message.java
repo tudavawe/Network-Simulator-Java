@@ -1,7 +1,5 @@
 package MessageHelper;
 
-import java.util.Arrays;
-
 public class Message {
     private final String message;
 

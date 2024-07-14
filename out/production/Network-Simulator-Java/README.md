@@ -16,13 +16,20 @@ Simulate the behaviour of a network with multiple routers, each having their own
 * Application
 * Physical layer Entity
 * Message encoding Entity
-* 
+* Message
+* Connection
 
 ### Packet application flow
 
 Application payload => Device => Orig Router => Network of Routers => Dest Router => Dest Device => Dest Application
 
+### Problems to solve
 
+1) Device to router
+   * Wired
+   * Wireless
+   * 0, 1 or more devices
+2) 
 
 
 
